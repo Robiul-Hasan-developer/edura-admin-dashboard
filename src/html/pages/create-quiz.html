@@ -1,0 +1,162 @@
+@@include('../partials/_template-top.html')
+
+    @@include('../partials/_sidebar.html')
+    <div class="dashboard-main-wrapper">
+        @@include('../partials/_top-navbar.html')
+        
+        <div class="dashboard-body">
+
+            <div class="breadcrumb-with-buttons mb-24 flex-between flex-wrap gap-8">
+                @@include('../partials/_breadcrumb.html', {
+                    'pageName': 'Create Quiz'
+                })
+
+                @@include('../partials/_breadcrumb-buttons.html', {
+                    'isDisabled': ''
+                })
+
+            </div>
+
+            @@include('../partials/_step-list.html', {
+                'firstDone': 'done',
+                'secondDone': 'done',
+                'thirdDone': 'done',
+                'fourthDone': '',
+                'fifthDone': '',
+                'firstActive': '',
+                'secondActive': '',
+                'thirdActive': '',
+                'fourthActive': 'active',
+                'fifthActive': '',
+            })
+            
+            <!-- Course Tab Start -->
+            <div class="card">
+                <div class="card-header border-bottom border-gray-100 flex-between flex-wrap gap-8">
+                    <div class="flex-align gap-8 flex-wrap">
+                        <h5 class="mb-0">Quiz Questions</h5>        
+                        <button type="button" class="text-main-600 text-md d-flex" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quiz Questions">
+                            <i class="ph-fill ph-question"></i>
+                        </button>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="border border-gray-100 rounded-pill py-8 px-20" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add Question
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <form action="#" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Question</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" class="form-control" placeholder="Add quiz question">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary py-9" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-main py-9">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="card-body">
+                    <form action="#">
+                        <div class="mb-20">
+                            <label for="question" class="h6 mb-8 fw-semibold">Question</label>
+                            <input type="text" class="form-control fw-medium text-15" id="question" value="1. Which discipline heavily influences the foundation of web design?" placeholder="Add question">
+                        </div>
+                        <div class="mb-20">
+                            <label for="multi" class="h6 mb-8 fw-semibold">Multiple Choices</label>
+                            <div class="row g-20">
+                                <div class="col-sm-6">
+                                    <div class="delete-item py-15 px-16 rounded-8 bg-gray-50 border border-main-200 flex-align gap-8">
+                                        <span class="w-24 h-24 bg-white rounded-circle flex-center text-capitalize text-14">A</span>
+                                        <span class="text-gray-500">Web layout idesign</span>
+                                        <button type="button" class="delete-btn text-danger-600 text-xl ms-auto d-flex"><i class="ph-fill ph-x-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="delete-item py-15 px-16 rounded-8 bg-gray-50 border border-main-200 flex-align gap-8">
+                                        <span class="w-24 h-24 bg-white rounded-circle flex-center text-capitalize text-14">B</span>
+                                        <span class="text-gray-500">Content Strategy</span>
+                                        <button type="button" class="delete-btn text-danger-600 text-xl ms-auto d-flex"><i class="ph-fill ph-x-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="delete-item py-15 px-16 rounded-8 bg-gray-50 border border-main-200 flex-align gap-8">
+                                        <span class="w-24 h-24 bg-white rounded-circle flex-center text-capitalize text-14">c</span>
+                                        <span class="text-gray-500">User Friendly</span>
+                                        <button type="button" class="delete-btn text-danger-600 text-xl ms-auto d-flex"><i class="ph-fill ph-x-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="delete-item py-15 px-16 rounded-8 bg-gray-50 border border-main-200 flex-align gap-8">
+                                        <span class="w-24 h-24 bg-white rounded-circle flex-center text-capitalize text-14">d</span>
+                                        <span class="text-gray-500">Design Idea</span>
+                                        <button type="button" class="delete-btn text-danger-600 text-xl ms-auto d-flex"><i class="ph-fill ph-x-circle"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="text-main-600 mt-16 text-15 fw-medium" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Add Choices
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <form action="#" class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Choices</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="text" class="form-control" placeholder="Add Quiz Choices">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary py-9" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-main py-9">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mb-20">
+                            <label for="question" class="h6 mb-8 fw-semibold">Answer</label>
+                            <div class="select-has-ico">
+                                <select class="form-control form-select rounded-8 bg-gray-50 border border-main-200 py-19">
+                                    <option value="1" selected disabled>Select correct answer</option>
+                                    <option value="2">Web laout idesign</option>
+                                    <option value="2">Content Strategy</option>
+                                    <option value="2">User Friendly</option>
+                                    <option value="2">Design Idea</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                   
+                    <div class="flex-align justify-content-end gap-8">
+                        <a href="about-course.html" class="btn btn-outline-main rounded-pill py-9">Back</a>
+                        <a href="publish-course.html" class="btn btn-main rounded-pill py-9">Continue</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Course Tab End -->
+        </div>
+        @@include('../partials/_dashboard-footer.html')
+    </div>
+    
+        @@include('../partials/_template-bottom.html')
+        <script>    
+            $('.delete-btn').on('click', function () {
+                $(this).closest('.delete-item').parent().addClass('d-none')
+            }); 
+    </script>
+    </body>
+</html>

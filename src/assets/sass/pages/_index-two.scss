@@ -1,0 +1,11 @@
+/* =============================== Index Two Css Start ============================== */
+.grettings-box {
+    &__content {
+        padding: clampCal(24, 42) clampCal(20, 44, 1299, 1699);
+    }
+}
+
+.grettings-box-two__content {
+    padding: 24px 0 24px clampCal(20, 74, 1299, 1699) !important;
+}
+/* =============================== Index Two Css End ============================== */

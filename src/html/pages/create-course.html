@@ -1,0 +1,134 @@
+@@include('../partials/_template-top.html')
+
+    @@include('../partials/_sidebar.html')
+    <div class="dashboard-main-wrapper">
+        @@include('../partials/_top-navbar.html')
+        
+        <div class="dashboard-body">
+
+            <div class="breadcrumb-with-buttons mb-24 flex-between flex-wrap gap-8">
+                @@include('../partials/_breadcrumb.html', {
+                    'pageName': 'Create Account'
+                })
+
+                @@include('../partials/_breadcrumb-buttons.html', {
+                    'isDisabled': 'disabled'
+                })
+            </div>
+
+            @@include('../partials/_step-list.html', {
+                'firstDone': '',
+                'secondDone': '',
+                'thirdDone': '',
+                'fourthDone': '',
+                'fifthDone': '',
+                'firstActive': 'active',
+                'secondActive': '',
+                'thirdActive': '',
+                'fourthActive': '',
+                'fifthActive': '',
+            })
+
+            <!-- Course Tab Start -->
+            <div class="card">
+                <div class="card-header border-bottom border-gray-100 flex-align gap-8">
+                    <h5 class="mb-0">Course Details</h5>        
+                    <button type="button" class="text-main-600 text-md d-flex" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Course Details">
+                        <i class="ph-fill ph-question"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="row gy-20">
+                            <div class="col-xxl-3 col-md-4 col-sm-5">
+                                <div class="mb-20">
+                                    <label for="fileUpload" class="h5 fw-semibold font-heading mb-0">Thumbnail Image <span class="text-13 text-gray-400 fw-medium">(Required)</span> </label>
+                                </div>
+                                <div id="fileUpload" class="fileUpload image-upload"></div>
+                            </div>
+                            <div class="col-xxl-9 col-md-8 col-sm-7">
+                                <div class="row g-20">
+                                    <div class="col-sm-12">
+                                        <label for="courseTitle" class="h5 mb-8 fw-semibold font-heading">Thumbnail Image <span class="text-13 text-gray-400 fw-medium">(Required)</span> </label>
+                                        <div class="position-relative">
+                                            <input type="text" class="text-counter placeholder-13 form-control py-11 pe-76" maxlength="100" id="courseTitle" placeholder="Name of the Lesson" value="Name of the Lesson">
+                                            <div class="text-gray-400 position-absolute inset-inline-end-0 top-50 translate-middle-y me-16">
+                                                <span id="current">18</span>
+                                                <span id="maximum">/ 100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="courseCategory" class="h5 mb-8 fw-semibold font-heading">Course Category </label>
+                                        <div class="position-relative">
+                                            <select id="courseCategory" class="form-select py-9 placeholder-13 text-15">
+                                                <option value="1" disabled selected>Enter course category</option>
+                                                <option value="2">Computer Science </option>
+                                                <option value="2">Business </option>
+                                                <option value="2">Management </option>
+                                                <option value="2">Humanities </option>
+                                                <option value="2">Data Science</option>
+                                                <option value="2">Artificial Intelligence</option>
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="courseLevel" class="h5 mb-8 fw-semibold font-heading">Course Level</label>
+                                        <div class="position-relative">
+                                            <select id="courseLevel" class="form-select py-9 placeholder-13 text-15">
+                                                <option value="1" disabled selected>Select course level</option>
+                                                <option value="2">Course Level 1</option>
+                                                <option value="2">Course Level 2</option>
+                                                <option value="2">Course Level 3</option>
+                                                <option value="2">Course Level 4</option>
+                                                <option value="2">Course Level 5</option>
+                                                <option value="2">Course Level 6</option>
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="courseTime" class="h5 mb-8 fw-semibold font-heading">Course Time</label>
+                                        <div class="position-relative">
+                                            <select id="courseTime" class="form-select py-9 placeholder-13 text-15">
+                                                <option value="1" disabled selected>Enter course category</option>
+                                                <option value="2">5 Hours</option>
+                                                <option value="2">10 Hours</option>
+                                                <option value="2">15 Hours</option>
+                                                <option value="2">20 Hours</option>
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="courseLesson" class="h5 mb-8 fw-semibold font-heading">Total Lesson</label>
+                                        <div class="position-relative">
+                                            <select id="courseLesson" class="form-select py-9 placeholder-13 text-15">
+                                                <option value="1" disabled selected>Enter course category</option>
+                                                <option value="2">Objectives</option>
+                                                <option value="2">Activities</option>
+                                                <option value="2">Materials</option>
+                                                <option value="2">Timeline</option>
+                                                <option value="2">Take home tasks</option>
+                                                <option value="2">Pedagogical methods</option>
+                                                <option value="2">Teacher's expectations </option>
+                                                <option value="2">Assessment</option>
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-align justify-content-end gap-8">
+                                <a href="mentor-courses.html" class="btn btn-outline-main rounded-pill py-9">Cancel</a>
+                                <a href="upload-videos.html" class="btn btn-main rounded-pill py-9">Continue</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Course Tab End -->
+        </div>
+        @@include('../partials/_dashboard-footer.html')
+    </div>
+    
+    @@include('../partials/_template-bottom.html')
+    </body>
+</html>
