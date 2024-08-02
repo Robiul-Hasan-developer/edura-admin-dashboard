@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/apexcharts.css">
     <!-- calendar Css -->
     <link rel="stylesheet" href="assets/css/calendar.css">
+    <!-- jvector map Css -->
+    <link rel="stylesheet" href="assets/css/jquery-jvectormap-2.0.5.css">
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head> 
@@ -125,7 +127,7 @@
                     </a>
                 </li>
                 <li class="sidebar-menu__item">
-                    <a href="#" class="sidebar-menu__link">
+                    <a href="analytics.html" class="sidebar-menu__link">
                         <span class="icon"><i class="ph ph-chart-bar"></i></span>
                         <span class="text">Analytics</span>
                     </a>
@@ -365,10 +367,10 @@
         <!-- User Profile Start -->
         <div class="dropdown">
             <button class="users arrow-down-icon border border-gray-200 rounded-pill p-4 d-inline-block pe-40 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="position-relative">
+                <span class="position-relative">
                     <img src="assets/images/thumbs/user-img.png" alt="Image" class="h-32 w-32 rounded-circle">
                     <span class="activation-badge w-8 h-8 position-absolute inset-block-end-0 inset-inline-end-0"></span>
-                </div>
+                </span>
             </button>
             <div class="dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0">
                 <div class="card border border-gray-100 rounded-12 box-shadow-custom">
@@ -484,16 +486,16 @@
                         </button>
                     </div>
                     <!-- Button trigger modal -->
-                    <button type="button" class="border border-gray-100 rounded-pill py-8 px-20" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="border border-gray-100 rounded-pill py-8 px-20" data-bs-toggle="modal" data-bs-target="#exampleModalOne">
                         Add Question
                     </button>
                     
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <form action="#" class="modal-dialog">
+                    <div class="modal fade" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalLabelOne" aria-hidden="true">
+                        <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Question</h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabelOne">Add Question</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -504,7 +506,7 @@
                                     <button type="submit" class="btn btn-main py-9">Save</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
@@ -516,7 +518,7 @@
                             <input type="text" class="form-control fw-medium text-15" id="question" value="1. Which discipline heavily influences the foundation of web design?" placeholder="Add question">
                         </div>
                         <div class="mb-20">
-                            <label for="multi" class="h6 mb-8 fw-semibold">Multiple Choices</label>
+                            <label class="h6 mb-8 fw-semibold">Multiple Choices</label>
                             <div class="row g-20">
                                 <div class="col-sm-6">
                                     <div class="delete-item py-15 px-16 rounded-8 bg-gray-50 border border-main-200 flex-align gap-8">
@@ -554,7 +556,7 @@
                             
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <form action="#" class="modal-dialog">
+                                <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="exampleModalLabel">Add Choices</h1>
@@ -568,7 +570,7 @@
                                             <button type="submit" class="btn btn-main py-9">Save</button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-20">
@@ -628,6 +630,10 @@
     <script src="assets/js/apexcharts.min.js"></script>
     <!-- Calendar Js -->
     <script src="assets/js/calendar.js"></script>
+    <!-- jvectormap Js -->
+    <script src="assets/js/jquery-jvectormap-2.0.5.min.js"></script>
+    <!-- jvectormap world Js -->
+    <script src="assets/js/jquery-jvectormap-world-mill-en.js"></script>
     
     <!-- main js -->
     <script src="assets/js/main.js"></script>

@@ -1383,6 +1383,21 @@ td.fc-header-center {
 }
 
 /* ======================= Common Table Css End ======================= */
+/* Vector Map Css Start */
+#world-map {
+    height: 115px !important;
+}
+
+.map-sm {
+    height: 160px !important;
+}
+
+.jvectormap-goback, .jvectormap-zoomin, .jvectormap-zoomout {
+    background: #D1D5DB;
+    color: #111827;
+}
+
+/* Vector Map Css End */
 /* ================================= Typography Css Start =========================== */
 * {
     margin: 0;
@@ -9616,7 +9631,7 @@ button:focus {
 /* ======================== Auth Css End ============================= */
 /* =============================== Index Two Css Start ============================== */
 .grettings-box__content {
-    padding: clamp(1.5rem, 0.131rem + 2.853vw, 2.625rem) clamp(1.25rem, -3.621rem + 6vw, 2.75rem);
+    padding: clamp(1.5rem, -0.326rem + 3.803vw, 3rem) clamp(1.25rem, -3.621rem + 6vw, 2.75rem) !important;
 }
 
 .grettings-box-two__content {
