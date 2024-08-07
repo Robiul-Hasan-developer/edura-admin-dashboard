@@ -104,6 +104,7 @@
     --size-144: 9rem;
     --size-160: 10rem;
     --size-164: 10.25rem;
+    --size-190: 11.875rem;
     --main-50: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.9));
     --main-100: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.8));
     --main-200: hsl(var(--main-h), var(--main-s), calc(var(--main-l) + (100% - var(--main-l)) * 0.7));
@@ -870,6 +871,17 @@ table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after, tab
     padding: 13px;
 }
 
+.dt-container .dt-paging .dt-paging-button {
+    height: 44px;
+    width: 44px;
+}
+
+.fixed-width {
+    width: 40px !important;
+    max-width: 40px !important;
+    min-width: 40px !important;
+}
+
 /* ==================== Data Tables Css End ========================== */
 /* Full Calendar Customize Css Start */
 .fc-border-separate tr.fc-last th {
@@ -1054,9 +1066,13 @@ td.fc-header-center {
     border-color: var(--warning-600);
 }
 
+#wrap {
+    padding-top: 8px;
+}
+
 .add-event {
     position: absolute;
-    inset-block-start: 0;
+    inset-block-start: -8px;
     inset-inline-start: 0;
 }
 
@@ -1380,6 +1396,14 @@ td.fc-header-center {
 
 .table.style-two tbody tr:last-child {
     border-bottom: 0 !important;
+}
+
+.table.style-three tbody tr {
+    border-bottom: 1px solid var(--gray-50);
+}
+
+.table.style-three tbody tr td {
+    padding: 24px 20px !important;
 }
 
 /* ======================= Common Table Css End ======================= */
@@ -1719,6 +1743,10 @@ button:focus {
     margin: var(--size-164) !important;
 }
 
+.m-190 {
+    margin: var(--size-190) !important;
+}
+
 .mx-2 {
     margin-inline: var(--size-2) !important;
 }
@@ -1897,6 +1925,10 @@ button:focus {
 
 .mx-164 {
     margin-inline: var(--size-164) !important;
+}
+
+.mx-190 {
+    margin-inline: var(--size-190) !important;
 }
 
 .my-2 {
@@ -2079,6 +2111,10 @@ button:focus {
     margin-block: var(--size-164) !important;
 }
 
+.my-190 {
+    margin-block: var(--size-190) !important;
+}
+
 .ms-2 {
     margin-inline-start: var(--size-2) !important;
 }
@@ -2257,6 +2293,10 @@ button:focus {
 
 .ms-164 {
     margin-inline-start: var(--size-164) !important;
+}
+
+.ms-190 {
+    margin-inline-start: var(--size-190) !important;
 }
 
 .me-2 {
@@ -2439,6 +2479,10 @@ button:focus {
     margin-inline-end: var(--size-164) !important;
 }
 
+.me-190 {
+    margin-inline-end: var(--size-190) !important;
+}
+
 .mt-2 {
     margin-block-start: var(--size-2) !important;
 }
@@ -2619,6 +2663,10 @@ button:focus {
     margin-block-start: var(--size-164) !important;
 }
 
+.mt-190 {
+    margin-block-start: var(--size-190) !important;
+}
+
 .mb-2 {
     margin-block-end: var(--size-2) !important;
 }
@@ -2797,6 +2845,10 @@ button:focus {
 
 .mb-164 {
     margin-block-end: var(--size-164) !important;
+}
+
+.mb-190 {
+    margin-block-end: var(--size-190) !important;
 }
 
 .translate-n74 {
@@ -3013,6 +3065,10 @@ button:focus {
     padding: var(--size-164) !important;
 }
 
+.p-190 {
+    padding: var(--size-190) !important;
+}
+
 .px-2 {
     padding-inline: var(--size-2) !important;
 }
@@ -3191,6 +3247,10 @@ button:focus {
 
 .px-164 {
     padding-inline: var(--size-164) !important;
+}
+
+.px-190 {
+    padding-inline: var(--size-190) !important;
 }
 
 .py-2 {
@@ -3373,6 +3433,10 @@ button:focus {
     padding-block: var(--size-164) !important;
 }
 
+.py-190 {
+    padding-block: var(--size-190) !important;
+}
+
 .ps-2 {
     padding-inline-start: var(--size-2) !important;
 }
@@ -3551,6 +3615,10 @@ button:focus {
 
 .ps-164 {
     padding-inline-start: var(--size-164) !important;
+}
+
+.ps-190 {
+    padding-inline-start: var(--size-190) !important;
 }
 
 .pe-2 {
@@ -3733,6 +3801,10 @@ button:focus {
     padding-inline-end: var(--size-164) !important;
 }
 
+.pe-190 {
+    padding-inline-end: var(--size-190) !important;
+}
+
 .pt-2 {
     padding-block-start: var(--size-2) !important;
 }
@@ -3911,6 +3983,10 @@ button:focus {
 
 .pt-164 {
     padding-block-start: var(--size-164) !important;
+}
+
+.pt-190 {
+    padding-block-start: var(--size-190) !important;
 }
 
 .pb-2 {
@@ -4093,6 +4169,10 @@ button:focus {
     padding-block-end: var(--size-164) !important;
 }
 
+.pb-190 {
+    padding-block-end: var(--size-190) !important;
+}
+
 @media (min-width: 992px) {
     .p-lg-20 {
         padding: 20px !important;
@@ -4209,6 +4289,10 @@ button:focus {
 
 .list-inside {
     list-style: inside;
+}
+
+.min-w-max-content {
+    min-width: max-content;
 }
 
 /* ================================= Classes Css End =========================== */
@@ -4425,6 +4509,10 @@ button:focus {
     width: 10.25rem !important;
 }
 
+.w-190 {
+    width: 11.875rem !important;
+}
+
 .h-2 {
     height: 0.125rem !important;
 }
@@ -4605,6 +4693,10 @@ button:focus {
     height: 10.25rem !important;
 }
 
+.h-190 {
+    height: 11.875rem !important;
+}
+
 .w-100px {
     width: 100px;
 }
@@ -4659,6 +4751,10 @@ button:focus {
 
 .max-w-845 {
     max-width: 845px;
+}
+
+.max-w-740 {
+    max-width: 740px;
 }
 
 .text-main-50 {
@@ -8099,6 +8195,10 @@ button:focus {
     font-size: 10.25rem !important;
 }
 
+.text-190 {
+    font-size: 11.875rem !important;
+}
+
 /* Font Size Class End */
 /* Box shadow start */
 .box-shadow-custom {
@@ -8309,6 +8409,10 @@ button:focus {
 
 .rounded-164 {
     border-radius: 10.25rem !important;
+}
+
+.rounded-190 {
+    border-radius: 11.875rem !important;
 }
 
 /* Hide Scroll bar Css For Custom Modal */
@@ -8604,6 +8708,10 @@ button:focus {
 
 .gap-164 {
     gap: var(--size-164) !important;
+}
+
+.gap-190 {
+    gap: var(--size-190) !important;
 }
 
 .hover-scale-1:hover {
@@ -9333,6 +9441,10 @@ button:focus {
     max-height: 740px;
 }
 
+.chat-box-item-wrapper.style-email {
+    max-height: calc(100vh - 374px);
+}
+
 .chat-box {
     width: calc(100% - 288px);
 }
@@ -9639,4 +9751,58 @@ button:focus {
 }
 
 /* =============================== Index Two Css End ============================== */
+/* ============================= List Grid View Css Start ============================ */
+.list-grid-view .activePage > a {
+    color: var(--main-600) !important;
+}
+
+.list-grid-view .activePage > a .ph-rows::before {
+    content: "\e5a2";
+}
+
+.list-grid-view .activePage > a .ph-squares-four::before {
+    content: "\e464";
+}
+
+.resource-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fit, 90px);
+    grid-gap: 32px;
+}
+
+.resource-item-wrapper:not(:last-child) {
+    border-bottom: 1px solid var(--gray-100);
+    margin-block-end: 16px;
+    padding-block-end: 16px;
+}
+
+.list-view-btn.active, .grid-view-btn.active {
+    color: var(--main-600) !important;
+}
+
+/* ============================= List Grid View Css End ============================ */
+/* Email Css Start */
+.item-active.activePage > a {
+    background-color: var(--main-50) !important;
+    color: var(--main-600) !important;
+}
+
+.item-active.activePage > a .icon {
+    color: inherit;
+}
+
+.email-links.activePage > a {
+    background-color: var(--main-50) !important;
+}
+
+.reload-button {
+    transition: 0.2s linear;
+}
+
+.reload-button:active {
+    transform: rotate(90deg);
+}
+
+/* Email Css End */
 /*# sourceMappingURL=main.css.map */

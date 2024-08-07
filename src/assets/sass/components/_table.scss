@@ -48,5 +48,16 @@
             }
         }
     }
+
+    &.style-three {
+        tbody {
+            tr {
+                border-bottom: 1px solid var(--gray-50);
+                td {
+                    padding: 24px 20px !important;
+                }
+            }
+        }
+    }
 }
 /* ======================= Common Table Css End ======================= */

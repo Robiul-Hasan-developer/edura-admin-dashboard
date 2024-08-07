@@ -19,6 +19,9 @@
 }
 .chat-box-item-wrapper {
     max-height: 740px;
+    &.style-email {
+        max-height: calc(100vh - 374px);
+    }
 }
 
 .chat-box {

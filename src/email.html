@@ -431,203 +431,329 @@
 
         
         <div class="dashboard-body">
-
-            <div class="breadcrumb-with-buttons mb-24 flex-between flex-wrap gap-8">
-                <!-- Breadcrumb Start -->
+            <!-- Breadcrumb Start -->
 <div class="breadcrumb mb-24">
     <ul class="flex-align gap-4">
         <li><a href="index.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">Home</a></li>
         <li> <span class="text-gray-500 fw-normal d-flex"><i class="ph ph-caret-right"></i></span> </li>
-        <li><span class="text-gray-500 fw-normal text-15">About Course</span></li>
+        <li><span class="text-gray-500 fw-normal text-15">Email</span></li>
     </ul>
 </div>
 <!-- Breadcrumb End -->
-
-                <!-- Buttons Start -->
-<div class="flex-align justify-content-end gap-8">
-    <button type="button" class="btn btn-outline-main bg-main-100 border-main-100 text-main-600 rounded-pill py-9">Save as Draft</button>
-    <button type="button" class="btn btn-main rounded-pill py-9" disabled>Publish Course</button>
-</div>
-<!-- Buttons End -->
-
-            </div>
-
-                <!-- Create Course Step List Start -->
-    <ul class="step-list mb-24">
-        <li class="step-list__item py-15 px-24 text-15 text-heading fw-medium flex-center gap-6 done ">
-            <span class="icon text-xl d-flex"><i class="ph ph-circle"></i></span> 
-            Course Details
-            <span class="line position-relative"></span>
-        </li>
-        <li class="step-list__item py-15 px-24 text-15 text-heading fw-medium flex-center gap-6 done ">
-            <span class="icon text-xl d-flex"><i class="ph ph-circle"></i></span> 
-            Upload Videos
-            <span class="line position-relative"></span>
-        </li>
-        <li class="step-list__item py-15 px-24 text-15 text-heading fw-medium flex-center gap-6  active">
-            <span class="icon text-xl d-flex"><i class="ph ph-circle"></i></span> 
-            About Course
-            <span class="line position-relative"></span>
-        </li>
-        <li class="step-list__item py-15 px-24 text-15 text-heading fw-medium flex-center gap-6  ">
-            <span class="icon text-xl d-flex"><i class="ph ph-circle"></i></span> 
-            Create Quiz
-            <span class="line position-relative"></span>
-        </li>
-        <li class="step-list__item py-15 px-24 text-15 text-heading fw-medium flex-center gap-6  ">
-            <span class="icon text-xl d-flex"><i class="ph ph-circle"></i></span> 
-            Publish Course
-            <span class="line position-relative"></span>
-        </li>
-    </ul>
-    <!-- Create Course Step List End -->
             
-            <!-- Course Tab Start -->
-            <div class="card">
-                <div class="card-header border-bottom border-gray-100 flex-align gap-8">
-                    <h5 class="mb-0">About Course</h5>        
-                    <button type="button" class="text-main-600 text-md d-flex" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="About Course">
-                        <i class="ph-fill ph-question"></i>
-                    </button>
-                </div>
-                <div class="card-body">
-                    <h6 class="mb-8 fw-semibold">Course Description</h6>
-                    <div class="p-16 rounded-12 bg-main-50 mb-20"> 
-                       <p>Build beautifully designed web and mobile projects for your customers using modern tools used by top companies in 2024. Includes 100+ assets and premium design templates that you can keep and use to customize for all your future projects. Learn to design for all types of devices using Figma and other tools used by some of the top designers in the world. Get hired as a Designer or become a freelancer that can work from anywhere and for anyone. Designers are in high demand!</p>
+            <div class="row gy-4">
+                <div class="col-xl-3">
+                    <div class="card h-100 p-0">
+                        <div class="card-body p-24">
+                            <button type="button" class="btn btn-main text-sm px-12 py-12 w-100 rounded-pill flex-center gap-8 mb-16">
+                                <i class="ph-fill ph-pencil-simple"></i>
+                                Compose
+                            </button>
+                            <div class="mt-16">
+                                <ul>
+                                    <li class="mb-8 email-links">
+                                        <a href="email.html" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-envelope-simple"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Inbox</span>
+                                                </span>
+                                                <span class="fw-medium">425</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-8 email-links">
+                                        <a href="starred.html" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-star"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Starred</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-8 email-links">
+                                        <a href="#" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-paper-plane-tilt"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Sent</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-8 email-links">
+                                        <a href="#" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-file"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Draft</span>
+                                                </span>
+                                                <span class="fw-medium">3</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-8 email-links">
+                                        <a href="#" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-warning-circle"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Spam</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hover-bg-main-50 px-20 py-8 w-100 rounded-pill text-gray-300 hover-text-gray-600">
+                                            <span class="flex-between gap-10 w-100">
+                                                <span class="flex-center gap-10">   
+                                                    <span class="icon text-xl line-height-1 d-flex">
+                                                        <i class="ph ph-trash"></i>
+                                                    </span>
+                                                    <span class="fw-medium">Bin</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h6 class="mb-8 fw-semibold">Attachment Files</h6>
-                    <div class="upload-card-item p-16 rounded-12 bg-main-50 mb-20"> 
-                        <div class="flex-between gap-8">
-                            <div class="flex-align gap-10 flex-wrap">
-                                <span class="w-36 h-36 text-lg rounded-circle bg-white flex-center text-main-600 flex-shrink-0">
-                                    <i class="ph ph-paperclip"></i>
-                                </span>
-                                <div class="">
-                                    <p class="text-15 text-gray-500">Drag & drop your single/multiple videos of course, or Browse </p>
-                                    <p class="text-13 text-gray-600">(max file size 100mb each)</p>
-                                </div>
-                            </div>
-                            <div class="flex-align gap-8">
-                                <span class="text-main-600 d-flex text-xl"><i class="ph-fill ph-check-circle"></i></span>
-                                <!-- Dropdown Start -->
-                                <div class="dropdown flex-shrink-0">
-                                    <button class="text-gray-600 text-xl d-flex rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="ph-fill ph-dots-three-outline"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0" >
-                                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
-                                            <div class="card-body p-12">
-                                                <div class="max-h-200 overflow-y-auto scroll-sm pe-8">
-                                                    <ul>
-                                                        <li class="mb-0">
-                                                            <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">Delete</span>
-                                                            </button>
-                                                            <button type="button" class="view-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">View</span>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                <!-- Email List Start -->
+                <div class="col-xl-9">
+                    <div class="card h-100 p-0 email-card">
+                        <div class="card-header border-bottom bg-base py-16 px-24">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                                <div class="flex-center gap-16">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox" id="selectAll">
+                                        <div class="dropdown line-height-1">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="line-height-1 d-flex"> 
+                                                <i class="ph ph-caret-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-12 border bg-base shadow">
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        All
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        None
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        Read
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        Unread
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        Starred
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="dropdown-item px-16 py-4 rounded-8 text-gray-400 bg-hover-neutral-200 text-hover-neutral-900">
+                                                        Unstarred
+                                                    </button>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Dropdown end -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="upload-card-item p-16 rounded-12 bg-main-50 mb-20"> 
-                        <div class="flex-between gap-8">
-                            <div class="flex-align gap-10">
-                                <span class="w-36 h-36 text-lg rounded-circle bg-white flex-center text-main-600">
-                                    <i class="ph ph-files"></i>
-                                </span>
-                                <div class="">
-                                    <p class="text-15 text-gray-500">Introduction of web & mobile Design.pdf</p>
-                                    <p class="text-13 text-gray-600">25 mb</p>
-                                </div>
-                            </div>
-                            <div class="flex-align gap-8">
-                                <span class="text-main-600 d-flex text-xl"><i class="ph-fill ph-check-circle"></i></span>
-                                <!-- Dropdown Start -->
-                                <div class="dropdown flex-shrink-0">
-                                    <button class="text-gray-600 text-xl d-flex rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="ph-fill ph-dots-three-outline"></i>
+                                    <button type="button" class="delete-button d-none text-secondary-light text-xl d-flex  rounded-4">
+                                        <i class="ph ph-trash"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0" >
-                                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
-                                            <div class="card-body p-12">
-                                                <div class="max-h-200 overflow-y-auto scroll-sm pe-8">
-                                                    <ul>
-                                                        <li class="mb-0">
-                                                            <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">Delete</span>
-                                                            </button>
-                                                            <button type="button" class="view-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">View</span>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Dropdown end -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="upload-card-item p-16 rounded-12 bg-main-50"> 
-                        <div class="flex-between gap-8">
-                            <div class="flex-align gap-10">
-                                <span class="w-36 h-36 text-lg rounded-circle bg-white flex-center text-main-600">
-                                    <i class="ph ph-files"></i>
-                                </span>
-                                <div class="">
-                                    <p class="text-15 text-gray-500">Introduction of web & mobile Design.pdf</p>
-                                    <p class="text-13 text-gray-600">25 mb</p>
-                                </div>
-                            </div>
-                            <div class="flex-align gap-8">
-                                <span class="text-main-600 d-flex text-xl"><i class="ph-fill ph-check-circle"></i></span>
-                                <!-- Dropdown Start -->
-                                <div class="dropdown flex-shrink-0">
-                                    <button class="text-gray-600 text-xl d-flex rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="ph-fill ph-dots-three-outline"></i>
+                                    <button type="button" class="reload-button text-secondary-light text-xl d-flex rounded-4">
+                                        <i class="ph ph-arrows-clockwise"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0" >
-                                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
-                                            <div class="card-body p-12">
-                                                <div class="max-h-200 overflow-y-auto scroll-sm pe-8">
-                                                    <ul>
-                                                        <li class="mb-0">
-                                                            <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">Delete</span>
-                                                            </button>
-                                                            <button type="button" class="view-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                                <span class="text">View</span>
-                                                            </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="dropdown">
+                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class=" d-flex rounded-4"> 
+                                            <i class="ph-fill ph-dots-three-outline-vertical"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu--lg p-12 border bg-base shadow">
+                                            <li>
+                                                <button type="button" class="dropdown-item px-16 py-8 rounded-8 text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 flex-center justify-content-start gap-10">
+                                                    <i class="ph ph-envelope-simple"></i>
+                                                    Mark all as read
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <p class="ms-40 mt-8 text-secondary-light mb-0">
+                                                    Select messages to see more actions
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
+                                    <form action="#" class="w-350 d-sm-block d-none">
+                                        <div class="position-relative">
+                                            <button type="submit" class="input-icon text-xl d-flex text-gray-100 pointer-event-none"><i class="ph ph-magnifying-glass"></i></button> 
+                                            <input type="text" class="form-control ps-40 h-40 border-transparent focus-border-main-600 bg-main-50 rounded-pill placeholder-15" placeholder="Search...">
+                                        </div>
+                                    </form>
                                 </div>
-                                <!-- Dropdown end -->
+                                <div class="flex-center gap-16">
+                                    <span class="text-secondary-light line-height-1">1-12 of 1,253</span>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link d-flex border text-gray-500 hover-bg-gray-50 text-xl w-40 h-32 flex-center" href="javascript:void(0)"><i class="ph ph-caret-left"></i> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link d-flex border text-gray-500 hover-bg-gray-50 text-xl w-40 h-32 flex-center" href="javascript:void(0)"><i class="ph ph-caret-right"></i> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="flex-align justify-content-end gap-8 mt-20">
-                        <a href="upload-videos.html" class="btn btn-outline-main rounded-pill py-9">Back</a>
-                        <a href="create-quiz.html" class="btn btn-main rounded-pill py-9">Continue</a>
+                        <div class="card-body p-0">
+                            <ul class="overflow-x-auto scroll-sm scroll-sm-horizontal">
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Jerome Bell</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Kristin Watson</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Cody Fisher</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Dianne Russell</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Floyd Miles</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Devon Lane</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Dianne Russell</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Annette Black</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Bessie Cooper</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Courtney Henry</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                                <li class="email-item px-24 py-16 flex-align gap-16 border-bottom border-gray-100 cursor-pointer min-w-max-content">
+                                    <div class="form-check style-check flex-center mb-0 gap-8">
+                                        <input class="form-check-input radius-4 border border-gray-200" type="checkbox" name="checkbox">
+                                    </div>
+                                    <button type="button" class="starred-button icon text-xl text-secondary-light line-height-1 d-flex">
+                                        <i class="ph ph-star"></i>
+                                    </button>
+                                    <a href="veiw-details.html" class="text-heading fw-medium text-md text-line-1 w-190">Wade Warren</a>
+                                    <a href="veiw-details.html" class="text-heading fw-medium mb-0 text-line-1 max-w-740">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</a>
+                                    <span class="text-heading fw-medium min-w-max-content ms-auto">6:07 AM</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <!-- Email List End -->
+
             </div>
-            <!-- Course Tab End -->
+            
         </div>
         <div class="dashboard-footer">
     <div class="flex-between flex-wrap gap-16">
@@ -641,8 +767,8 @@
     </div>
 </div>
     </div>
-    
-            <!-- Jquery js -->
+        
+        <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle Js -->
     <script src="assets/js/boostrap.bundle.min.js"></script>
@@ -673,10 +799,63 @@
     <script src="assets/js/main.js"></script>
 
 
-        <script>
-            $('.delete-item-btn').on('click', function () {
-                $(this).closest('.upload-card-item').addClass('d-none')
-            }); 
-        </script>
+
+    
+<script>
+    // Table Header Checkbox checked all js Start
+    $('#selectAll').on('change', function () {
+        $('.form-check .form-check-input').prop('checked', $(this).prop('checked')); 
+        
+        if ($(this).prop('checked')) {
+            $('.email-item').addClass('active');
+        } else {
+            $('.email-item').removeClass('active');
+        }
+    }); 
+
+    // Active Item with js
+    $('.form-check .form-check-input').on('change', function () {
+        if ($(this).is(':checked')) {
+            $(this).closest('.email-item').addClass('active'); 
+        } else {
+            $(this).closest('.email-item').removeClass('active'); 
+        }
+    });
+
+    // Selected Checkbox count amount js Start
+    $('.email-card .form-check-input').on('change', function () {
+        let selectedCount = $('.email-card .form-check-input:checked').length;
+
+        if(selectedCount > 0) {
+            $('.delete-button').removeClass('d-none'); 
+        } else {
+            $('.delete-button').addClass('d-none')
+        }
+    });
+    // Selected Checkbox count amount js End
+
+    $('.delete-button').on('click', function () {
+        $('.email-item.active').addClass('d-none')
+    }); 
+   
+    // Page Reload Js
+    $(".reload-button").on("click", function() {
+        history.go(0);
+    });
+   
+    // Starred Button js
+    $('.starred-button').on('click', function () {
+        var icon = $(this).children('i');
+        if(icon.hasClass('ph ph-star')) {
+            icon.removeClass('ph ph-star'); 
+            icon.addClass('ph-fill ph-star text-warning-600'); 
+        } else {
+            icon.removeClass('ph-fill ph-star text-warning-600'); 
+            icon.addClass('ph ph-star'); 
+        }
+    }); 
+</script>
+
+
     </body>
 </html>

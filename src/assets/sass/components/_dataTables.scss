@@ -112,4 +112,15 @@ table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after, table.d
 .table-lg.dataTable>thead>tr>th, table.dataTable>thead>tr>td {
     padding: 13px;
 }
+.dt-container .dt-paging .dt-paging-button {
+    height: 44px;
+    width: 44px;
+}
+
+
+.fixed-width {
+    width: 40px !important;
+    max-width: 40px !important;
+    min-width: 40px !important;
+}
 /* ==================== Data Tables Css End ========================== */

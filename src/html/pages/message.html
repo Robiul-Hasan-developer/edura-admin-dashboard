@@ -380,26 +380,30 @@
                                 </div>
                             </div>
 
-                            <div class="dropdown flex-shrink-0">
-                                <button class="text-gray-400 text-xl d-flex rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="ph-fill ph-dots-three-outline"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0">
-                                    <div class="card border border-gray-100 rounded-12 box-shadow-custom">
-                                        <div class="card-body p-12">
-                                            <div class="max-h-200 overflow-y-auto scroll-sm pe-8">
-                                                <ul>
-                                                    <li class="mb-0">
-                                                        <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                            <span class="text"><i class="ph ph-x-circle"></i> All Clear</span>
-                                                        </button>
-                                                    </li>
-                                                    <li class="mb-0">
-                                                        <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
-                                                            <span class="text"><i class="ph ph-user-minus"></i> Block</span>
-                                                        </button>
-                                                    </li>
-                                                </ul>
+                            <div class="flex-align gap-16">
+                                <button type="button" class="text-main-600 text-xl d-flex"><i class="ph-fill ph-phone"></i></button>
+                                <button type="button" class="text-main-600 text-xl d-flex"><i class="ph-fill ph-video-camera"></i></button>
+                                <div class="dropdown flex-shrink-0">
+                                    <button class="text-gray-400 text-xl d-flex rounded-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ph-fill ph-dots-three-outline-vertical"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu--md border-0 bg-transparent p-0">
+                                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                                            <div class="card-body p-12">
+                                                <div class="max-h-200 overflow-y-auto scroll-sm pe-8">
+                                                    <ul>
+                                                        <li class="mb-0">
+                                                            <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
+                                                                <span class="text"><i class="ph ph-x-circle"></i> All Clear</span>
+                                                            </button>
+                                                        </li>
+                                                        <li class="mb-0">
+                                                            <button type="button" class="delete-item-btn py-6 text-15 px-8 hover-bg-gray-50 text-gray-300 w-100 rounded-8 fw-normal text-xs d-block text-start">
+                                                                <span class="text"><i class="ph ph-user-minus"></i> Block</span>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -457,9 +461,10 @@
                     </div>
                     <div class="card-footer border-top border-gray-100">
                         <form action="#" class="flex-align gap-8 chat-box-bottom">
-                            <button type="button" class="flex-shrink-0 file-btn w-48 h-48 flex-center bg-main-50 text-24 text-main-600 rounded-circle hover-bg-main-100 transition-2">
+                            <label for="fileUp" class="flex-shrink-0 file-btn w-48 h-48 flex-center bg-main-50 text-24 text-main-600 rounded-circle hover-bg-main-100 transition-2">
                                 <i class="ph ph-plus"></i>
-                            </button>
+                            </label>
+                            <input type="file" name="fileName" id="fileUp" hidden>
                             <input type="text" class="form-control h-48 border-transparent px-20 focus-border-main-600 bg-main-50 rounded-pill placeholder-15" placeholder="Type your message...">
                             <button type="button" class="flex-shrink-0 file-btn w-48 h-48 flex-center bg-main-50 text-24 text-main-600 rounded-circle hover-bg-main-100 transition-2">
                                 <i class="ph-fill ph-microphone"></i>
