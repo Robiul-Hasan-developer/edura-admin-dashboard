@@ -5,35 +5,6 @@
         @@include('../partials/_top-navbar.html')
         
         <div class="dashboard-body">
-
-            <div class="breadcrumb-with-buttons mb-24 flex-between flex-wrap gap-8">
-                @@include('../partials/_breadcrumb.html', {
-                    'pageName': 'Students'
-                })
-                <!-- Breadcrumb Right -->
-                <div class="flex-align gap-8 flex-wrap">
-                    <div class="position-relative text-gray-500 flex-align gap-4 text-13">
-                        <span class="text-inherit">Sort by: </span>
-                        <div class="position-relative">
-                            <span class="position-absolute top-50 start-0 translate-middle-y d-flex ms-8 text-lg"><i class="ph ph-funnel-simple"></i></span>
-                            <select class="form-control px-20 ps-28 py-16 text-inherit rounded-8 bg-white text-center">
-                                <option value="1" selected="">Popular</option>
-                                <option value="1">Latest</option>
-                                <option value="1">Trending</option>
-                                <option value="1">Best Match</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="position-relative text-gray-500 text-13">
-                        <span class="position-absolute top-50 start-0 translate-middle-y d-flex ms-8 text-lg"><i class="ph ph-layout"></i></span>
-                        <select class="form-control px-20 ps-28 py-16 text-inherit rounded-8 bg-white text-center">
-                            <option value="1" selected="" disabled="">Export</option>
-                            <option value="1">CSV</option>
-                            <option value="1">JSON</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
            
             <div class="row gy-4">
                 <div class="col-lg-9">
@@ -45,7 +16,7 @@
                                     <h4 class="mb-2">155+</h4>
                                     <span class="text-gray-600">Completed Courses</span>
                                     <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-600 text-white text-2xl"><i class="ph-fill ph-graduation-cap"></i></span>
+                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-600 text-white text-2xl"><i class="ph-fill ph-book-open"></i></span>
                                         <div id="complete-course" class="remove-tooltip-title rounded-tooltip-value"></div>
                                     </div>
                                 </div>
@@ -57,7 +28,7 @@
                                     <h4 class="mb-2">39+</h4>
                                     <span class="text-gray-600">Earned Certificate</span>
                                     <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-two-600 text-white text-2xl"><i class="ph-fill ph-graduation-cap"></i></span>
+                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-two-600 text-white text-2xl"><i class="ph-fill ph-certificate"></i></span>
                                         <div id="earned-certificate" class="remove-tooltip-title rounded-tooltip-value"></div>
                                     </div>
                                 </div>
@@ -69,7 +40,7 @@
                                     <h4 class="mb-2">25+</h4>
                                     <span class="text-gray-600">Course in Progress</span>
                                     <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-purple-600 text-white text-2xl"><i class="ph-fill ph-certificate"></i></span>
+                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-purple-600 text-white text-2xl"> <i class="ph-fill ph-graduation-cap"></i></span>
                                         <div id="course-progress" class="remove-tooltip-title rounded-tooltip-value"></div>
                                     </div>
                                 </div>
@@ -81,7 +52,7 @@
                                     <h4 class="mb-2">18k+</h4>
                                     <span class="text-gray-600">Community Support</span>
                                     <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-warning-600 text-white text-2xl"><i class="ph-fill ph-users-four"></i></span>
+                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-warning-600 text-white text-2xl"><i class="ph-fill ph-users-three"></i></span>
                                         <div id="community-support" class="remove-tooltip-title rounded-tooltip-value"></div>
                                     </div>
                                 </div>
@@ -115,7 +86,7 @@
                                 </div>
                             </div>
                             
-                            <div id="doubleLineChart" class="tooltip-style"></div>
+                            <div id="doubleLineChart" class="tooltip-style y-value-left"></div>
                             
                         </div>
                     </div>
@@ -287,7 +258,7 @@
                         <div class="card-body">
                             <div class="mb-20 flex-between flex-wrap gap-8">
                                 <h4 class="mb-0">Assignments</h4>
-                                <a href="student-courses.html" class="text-13 fw-medium text-main-600 hover-text-decoration-underline">See All</a>
+                                <a href="assignment.html" class="text-13 fw-medium text-main-600 hover-text-decoration-underline">See All</a>
                             </div>
                             <div class="p-xl-4 py-16 px-12 flex-between gap-8 rounded-8 border border-gray-100 hover-border-gray-200 transition-1 mb-16">
                                 <div class="flex-align flex-wrap gap-8">
@@ -661,6 +632,60 @@
         var chart = new ApexCharts(document.querySelector("#radialMultipleBar"), options);
         chart.render();
         // ================================= Multiple Radial Bar Chart End =============================
+
+        // ========================== Export Js Start ==============================
+        document.getElementById('exportOptions').addEventListener('change', function() {
+            const format = this.value;
+            const table = document.getElementById('studentTable');
+            let data = [];
+            const headers = [];
+            
+            // Get the table headers
+            table.querySelectorAll('thead th').forEach(th => {
+                headers.push(th.innerText.trim());
+            });
+
+            // Get the table rows
+            table.querySelectorAll('tbody tr').forEach(tr => {
+                const row = {};
+                tr.querySelectorAll('td').forEach((td, index) => {
+                    row[headers[index]] = td.innerText.trim();
+                });
+                data.push(row);
+            });
+
+            if (format === 'csv') {
+                downloadCSV(data);
+            } else if (format === 'json') {
+                downloadJSON(data);
+            }
+        });
+
+        function downloadCSV(data) {
+            const csv = data.map(row => Object.values(row).join(',')).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'students.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function downloadJSON(data) {
+            const json = JSON.stringify(data, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'students.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        // ========================== Export Js End ==============================
+        
     </script>
     
     

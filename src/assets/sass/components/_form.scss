@@ -30,27 +30,6 @@
             color: var(--gray-600); 
         }
     }
-    // &[type="file"] {
-    //     line-height: 50px;
-    //     padding: 0;
-    //     position: relative;
-    //     &::file-selector-button {
-    //         border: 1px solid hsl(var(--black) / .08);
-    //         padding: 4px 6px;
-    //         border-radius: .2em;
-    //         background-color: hsl(var(--main)) !important;
-    //         transition: .2s linear;
-    //         line-height: 25px;
-    //         position: relative;
-    //         margin-inline-start: 15px;
-    //         color: hsl(var(--body-color)) !important;
-    //         &:hover {
-    //             background-color: hsl(var(--main));
-    //             border: 1px solid hsl(var(--main));
-    //             color: hsl(var(--black));
-    //         }
-    //     }
-    // }
 }
 
 .placeholder {
@@ -148,25 +127,8 @@
         padding-inline-end: 30px !important;
     }
 } 
-.select {
-    color: hsl(var(--black) / .6) !important;
-    padding: 16px 24px;
-    @include md-screen {
-        padding: 11px 24px;
-    }
-    @include sm-screen {
-        padding: 9px 24px;
-         
-    }
-    &:focus {
-        border-color: hsl(var(--main));
-        color: hsl(var(--black)) !important;
-        outline: none;
-    }
-    option {
-        background-color: hsl(var(--white));
-        color: hsl(var(--heading-color));
-    }
+select {
+    color: var(--gray-300) !important;
 }
 /* Form Select End */
 

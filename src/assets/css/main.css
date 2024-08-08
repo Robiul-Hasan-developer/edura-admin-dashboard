@@ -442,32 +442,8 @@
     padding-inline-end: 30px !important;
 }
 
-.select {
-    color: hsl(var(--black)/0.6) !important;
-    padding: 16px 24px;
-}
-
-@media screen and (max-width: 991px) {
-    .select {
-        padding: 11px 24px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .select {
-        padding: 9px 24px;
-    }
-}
-
-.select:focus {
-    border-color: hsl(var(--main));
-    color: hsl(var(--black)) !important;
-    outline: none;
-}
-
-.select option {
-    background-color: hsl(var(--white));
-    color: hsl(var(--heading-color));
+select {
+    color: var(--gray-300) !important;
 }
 
 /* Form Select End */
@@ -880,6 +856,18 @@ table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after, tab
     width: 40px !important;
     max-width: 40px !important;
     min-width: 40px !important;
+}
+
+.dt-paging-button {
+    font-size: 20px;
+}
+
+.fc-header-title {
+    margin-top: -14px;
+}
+
+.fc-header-title h2 {
+    margin-bottom: 0;
 }
 
 /* ==================== Data Tables Css End ========================== */
@@ -1338,6 +1326,16 @@ td.fc-header-center {
 
 #activityDonutChart .apexcharts-text {
     fill: hsl(var(--white)) !important;
+}
+
+.apexcharts-inner {
+    position: relative;
+    padding-left: 35px !important;
+    margin-left: 20px !important;
+}
+
+.y-value-left .apexcharts-yaxis {
+    transform: translateX(10px);
 }
 
 /* ================================ Apex Charts Css End =================================== */
@@ -4701,6 +4699,10 @@ button:focus {
     width: 100px;
 }
 
+.w-50-perc {
+    width: 50%;
+}
+
 .w-350 {
     width: 350px;
 }
@@ -7052,6 +7054,10 @@ button:focus {
 
 .focus-border-dribble-600:focus {
     border-color: var(--dribble-600) !important;
+}
+
+.focus-border-main-600:focus-within {
+    border-color: var(--main-600) !important;
 }
 
 .border-dashed {
@@ -9743,7 +9749,7 @@ button:focus {
 /* ======================== Auth Css End ============================= */
 /* =============================== Index Two Css Start ============================== */
 .grettings-box__content {
-    padding: clamp(1.5rem, -0.326rem + 3.803vw, 3rem) clamp(1.25rem, -3.621rem + 6vw, 2.75rem) !important;
+    padding: clamp(1.5rem, -1.086rem + 5.388vw, 3.625rem) clamp(1.25rem, -3.621rem + 6vw, 2.75rem) !important;
 }
 
 .grettings-box-two__content {

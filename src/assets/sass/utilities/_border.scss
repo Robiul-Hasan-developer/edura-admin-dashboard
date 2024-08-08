@@ -34,6 +34,10 @@
     }
   }
 
+.focus-border-main-600:focus-within {
+  border-color: var(--main-600) !important;
+}
+
 
 .border {
   &-dashed {

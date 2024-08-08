@@ -66,7 +66,7 @@
                     <!-- Submenu start -->
                     <ul class="sidebar-submenu">
                         <li class="sidebar-submenu__item">
-                            <a href="index.html" class="sidebar-submenu__link"> Students </a>
+                            <a href="index.html" class="sidebar-submenu__link"> Dashboard One </a>
                         </li>
                         <li class="sidebar-submenu__item">
                             <a href="index-2.html" class="sidebar-submenu__link"> Dashboard Two </a>
@@ -144,6 +144,12 @@
                         <span class="text">Library</span>
                     </a>
                 </li>
+                <li class="sidebar-menu__item">
+                    <a href="pricing-plan.html" class="sidebar-menu__link">
+                        <span class="icon"><i class="ph ph-coins"></i></span>
+                        <span class="text">Pricing</span>
+                    </a>
+                </li>
                 
                 <li class="sidebar-menu__item">
                     <span class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Settings</span>
@@ -194,7 +200,7 @@
                 <div class="mt-n74">
                     <h5 class="mb-4 mt-22">Get Pro Certificate</h5>
                     <p class="">Explore 400+ courses with lifetime members</p>
-                    <a href="setting.html" class="btn btn-main mt-16 rounded-pill">Get Access</a>
+                    <a href="pricing-plan.html" class="btn btn-main mt-16 rounded-pill">Get Access</a>
                 </div>
             </div>
         </div>
@@ -390,7 +396,7 @@
                                 </a>
                             </li>
                             <li class="mb-4">
-                                <a href="setting.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                <a href="pricing-plan.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
                                     <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-chart-bar"></i></span>
                                     <span class="text">Upgrade Plan</span>
                                 </a>
@@ -438,33 +444,35 @@
     <ul class="flex-align gap-4">
         <li><a href="index.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">Home</a></li>
         <li> <span class="text-gray-500 fw-normal d-flex"><i class="ph ph-caret-right"></i></span> </li>
-        <li><span class="text-gray-500 fw-normal text-15">Files & Resources</span></li>
+        <li><span class="text-main-600 fw-normal text-15">Files & Resources</span></li>
     </ul>
 </div>
 <!-- Breadcrumb End -->
-                <!-- Breadcrumb Right -->
-                <div class="flex-align gap-8 flex-wrap">
-                    <div class="position-relative text-gray-500 flex-align gap-4 text-13">
-                        <span class="text-inherit">Sort by: </span>
-                        <div class="position-relative">
-                            <span class="position-absolute top-50 start-0 translate-middle-y d-flex ms-8 text-lg"><i class="ph ph-funnel-simple"></i></span>
-                            <select class="form-control px-20 ps-28 py-16 text-inherit rounded-8 bg-white text-center">
-                                <option value="1" selected="">Popular</option>
-                                <option value="1">Latest</option>
-                                <option value="1">Trending</option>
-                                <option value="1">Best Match</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="position-relative text-gray-500 text-13">
-                        <span class="position-absolute top-50 start-0 translate-middle-y d-flex ms-8 text-lg"><i class="ph ph-layout"></i></span>
-                        <select class="form-control px-20 ps-28 py-16 text-inherit rounded-8 bg-white text-center">
-                            <option value="1" selected="" disabled="">Export</option>
-                            <option value="1">CSV</option>
-                            <option value="1">JSON</option>
+
+               <!-- Breadcrumb Right Start -->
+               <div class="flex-align gap-8 flex-wrap">
+                <div class="position-relative text-gray-500 flex-align gap-4 text-13">
+                    <span class="text-inherit">Sort by: </span>
+                    <div class="flex-align text-gray-500 text-13 border border-gray-100 rounded-4 ps-20 focus-border-main-600 bg-white">
+                        <span class="text-lg"><i class="ph ph-funnel-simple"></i></span>
+                        <select class="form-control ps-8 pe-20 py-16 border-0 text-inherit rounded-4 text-center">
+                            <option value="1" selected>Popular</option>
+                            <option value="1">Latest</option>
+                            <option value="1">Trending</option>
+                            <option value="1">Matches</option>
                         </select>
                     </div>
                 </div>
+                <div class="flex-align text-gray-500 text-13 border border-gray-100 rounded-4 ps-20 focus-border-main-600 bg-white">
+                    <span class="text-lg"><i class="ph ph-layout"></i></span>
+                    <select class="form-control ps-8 pe-20 py-16 border-0 text-inherit rounded-4 text-center" id="exportOptions">
+                        <option value="" selected disabled>Export</option>
+                        <option value="csv">CSV</option>
+                        <option value="json">JSON</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Breadcrumb Right End -->
             </div>
            
             <!-- Card Start -->
@@ -486,7 +494,7 @@
                                         <button type="button" class="list-view-btn text-gray-200 text-2xl">
                                             <i class="ph ph-rows"></i>
                                         </button>
-                                        <button type="button"class="grid-view-btn active text-gray-200 text-2xl">
+                                        <button type="button" class="grid-view-btn active text-gray-200 text-2xl">
                                             <i class="ph ph-squares-four"></i>
                                         </button>
                                     </div>
@@ -1429,6 +1437,60 @@
 
 
     <script>    
+
+     // ========================== Export Js Start ==============================
+        document.getElementById('exportOptions').addEventListener('change', function() {
+            const format = this.value;
+            const table = document.getElementById('studentTable');
+            let data = [];
+            const headers = [];
+            
+            // Get the table headers
+            table.querySelectorAll('thead th').forEach(th => {
+                headers.push(th.innerText.trim());
+            });
+
+            // Get the table rows
+            table.querySelectorAll('tbody tr').forEach(tr => {
+                const row = {};
+                tr.querySelectorAll('td').forEach((td, index) => {
+                    row[headers[index]] = td.innerText.trim();
+                });
+                data.push(row);
+            });
+
+            if (format === 'csv') {
+                downloadCSV(data);
+            } else if (format === 'json') {
+                downloadJSON(data);
+            }
+        });
+
+        function downloadCSV(data) {
+            const csv = data.map(row => Object.values(row).join(',')).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'students.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function downloadJSON(data) {
+            const json = JSON.stringify(data, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'students.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        // ========================== Export Js End ==============================
+    
         // Table Header Checkbox checked all js Start
         $('#selectAll').on('change', function () {
             $('.form-check .form-check-input').prop('checked', $(this).prop('checked')); 

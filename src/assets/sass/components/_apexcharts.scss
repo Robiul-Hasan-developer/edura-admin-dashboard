@@ -95,4 +95,13 @@
     fill: hsl(var(--white)) !important;
   }
 }
+
+.apexcharts-inner {
+  position: relative;
+  padding-left: 35px !important;
+  margin-left: 20px !important;
+}
+.y-value-left .apexcharts-yaxis {
+  transform: translateX(10px);
+}
 /* ================================ Apex Charts Css End =================================== */
