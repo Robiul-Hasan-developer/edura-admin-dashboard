@@ -442,7 +442,7 @@
     padding-inline-end: 30px !important;
 }
 
-select {
+select, input[type=date] {
     color: var(--gray-300) !important;
 }
 
@@ -868,6 +868,18 @@ table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after, tab
 
 .fc-header-title h2 {
     margin-bottom: 0;
+}
+
+.dataTable > thead > tr > th {
+    padding: 20px 10px;
+}
+
+.dt-container div.dt-layout-cell {
+    padding: 0 !important;
+}
+
+.dt-container.dt-empty-footer tbody > tr:last-child > * {
+    border-bottom: 0 !important;
 }
 
 /* ==================== Data Tables Css End ========================== */
@@ -9644,6 +9656,11 @@ button:focus {
         flex-wrap: wrap;
     }
 }
+
+.toggle-search-box {
+    display: none;
+}
+
 /* ====================== Setting My Details End =========================== */
 /* ============================== Billing Tab Css Start ======================== */
 .payment-method.active {

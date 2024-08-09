@@ -144,32 +144,6 @@
 
   
   // ========================= List Grid View Js Start ===========================
-  // if($('.list-grid-view .activePage a i').hasClass('ph ph-rows')) {
-  //   $('.list-grid-view .activePage a i').removeClass('ph ph-rows')
-  //   $('.list-grid-view .activePage a i').addClass('ph-fill ph-rows')
-  // }
-
-  // if ($('.list-grid-view .activePage a i').hasClass('ph-rows')) {
-  //   $('.list-grid-view .activePage a i').removeClass('ph-rows').addClass('ph-fill ph-rows');
-  // }
-
-  // var currentPage = window.location.pathname.split("/").pop();
-
-  // $('.list-grid-view li').each(function() {
-      // var link = $(this).find('a').attr('href');
-      // if (link === currentPage) {
-      //     $(this).addClass('activePage');
-
-      //     var icon = $(this).find('a i');
-      //     if (icon.hasClass('ph-rows')) {
-      //         icon.removeClass('ph-rows').addClass('ph-fill ph-rows');
-      //     } else if (icon.hasClass('ph-squares-four')) {
-      //         icon.removeClass('ph-squares-four').addClass('ph-fill ph-squares-four');
-      //     }
-      // }
-  // });
-
-
   $('.list-grid-view li.activePage').each(function() {
     var icon = $(this).find('a i');
     if (icon.hasClass('ph-rows')) {
@@ -192,13 +166,16 @@
     $('.grid-view').removeClass('d-none'); 
     $('.list-view').addClass('d-none'); 
   }); 
-  
-// .list-view-btn
-// .grid-view-btn
   // ========================= List Grid View Js End ===========================
 
-
   
+  // ========================= Toggle Search Box Js Start ===========================
+  $('.toggle-search-btn').on('click', function () {
+    $(this).toggleClass('bg-main-600 border-main-600 text-white'); 
+    $('.toggle-search-box').slideToggle(); 
+  }); 
+  // ========================= Toggle Search Box Js End ===========================
+
   });
   // ==========================================
   //      End Document Ready function

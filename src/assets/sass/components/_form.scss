@@ -127,7 +127,7 @@
         padding-inline-end: 30px !important;
     }
 } 
-select {
+select, input[type="date"] {
     color: var(--gray-300) !important;
 }
 /* Form Select End */

@@ -922,7 +922,7 @@
                             Access to course community
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline-main w-100 rounded-pill py-16 border-main-300 text-17 fw-medium mt-32">Get Started</a>
+                    <a href="#" class="btn btn-outline-main w-100 rounded-pill py-16 border-main-300 text-17 fw-medium mt-32">Get Started</a>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -965,7 +965,7 @@
                             Access to course community
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-main w-100 rounded-pill py-16 border-main-600 text-17 fw-medium mt-32">Get Started</a>
+                    <a href="#" class="btn btn-main w-100 rounded-pill py-16 border-main-600 text-17 fw-medium mt-32">Get Started</a>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -1007,7 +1007,7 @@
                             Access to course community
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline-main w-100 rounded-pill py-16 border-main-300 text-17 fw-medium mt-32">Get Started</a>
+                    <a href="#" class="btn btn-outline-main w-100 rounded-pill py-16 border-main-300 text-17 fw-medium mt-32">Get Started</a>
                 </div>
             </div>
 
@@ -1111,16 +1111,57 @@
 
                     <!-- Billing history Start -->
                     <div class="card mt-24">
-                        <div class="card-header flex-wrap border-bottom flex-between gap-16">
-                            <div>
-                                <h4 class="mb-4">Billing History</h4>
-                                <p class="text-gray-600 text-15">See the transaction you made</p>
-                            </div>
-                            <div class="flex-align flex-wrap justify-content-end gap-8">
-                                <button type="button" class="btn btn-outline-main bg-main-100 border-main-100 text-main-600 rounded-pill py-9">Add Filter</button>
-                                <button type="button" class="btn btn-main rounded-pill py-9">Download All</button>
+                        <div class="card-header border-bottom">
+                            <div class="flex-between flex-wrap  gap-16">
+                                <div>
+                                    <h4 class="mb-4">Billing History</h4>
+                                    <p class="text-gray-600 text-15">See the transaction you made</p>
+                                </div>
+                                <div class="flex-align flex-wrap justify-content-end gap-8">
+                                    <button type="button" class="toggle-search-btn btn btn-outline-main bg-main-100 border-main-100 text-main-600 rounded-pill py-9">Add Filter</button>
+                                    <button type="button" class="btn btn-main rounded-pill py-9">Download All</button>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="card toggle-search-box border-bottom border-gray-100 rounded-0">
+                            <div class="card-body">
+                                <form action="#" class="search-input-form">
+                                    <div class="search-input">
+                                        <select class="form-control form-select h6 rounded-4 mb-0 py-6 px-8">
+                                            <option value="" selected disabled>Invoice Type</option>
+                                            <option value="">Credit Invoice</option>
+                                            <option value="">Debit Invoice</option>
+                                            <option value="">Mixed Invoice</option>
+                                            <option value="">Commercial Invoice</option>
+                                        </select>
+                                    </div>
+                                    <div class="search-input">
+                                        <select class="form-control form-select h6 rounded-4 mb-0 py-6 px-8">
+                                            <option value="" selected disabled>amount</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="search-input">
+                                        <input type="date" class="form-control form-select h6 rounded-4 mb-0 py-6 px-8">
+                                    </div>
+                                    <div class="search-input">
+                                        <select class="form-control form-select h6 rounded-4 mb-0 py-6 px-8">
+                                            <option value="" selected disabled>plan</option>
+                                            <option value="">Basic Plan</option>
+                                            <option value="">Standard Plan</option>
+                                            <option value="">Premium Plan </option>
+                                        </select>
+                                    </div>
+                                    <div class="search-input">
+                                        <button type="submit" class="btn btn-main rounded-pill py-9 w-100">Apply Filter</button>
+                                    </div>
+                                </form>                    
+                            </div>
+                        </div>
+
                         <div class="card-body p-0 overflow-x-auto">
                             <table id="studentTable" class="table table-lg table-striped w-100">
                                 <thead>
@@ -1311,7 +1352,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer border-top border-gray-100">
                             <div class="flex-align justify-content-end gap-8">
                                 <button type="reset" class="btn btn-outline-main bg-main-100 border-main-100 text-main-600 rounded-pill py-9">Cancel</button>
                                 <button type="submit" class="btn btn-main rounded-pill py-9">Save  Changes</button>
@@ -1518,6 +1559,8 @@
             lengthChange: false,
             info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
             pagination: false,
+            info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
+            paging: false,
             "columnDefs": [
                 { "orderable": false, "targets": [0, 6] } // Disables sorting on the 1st & 7th column (index 6)
             ]

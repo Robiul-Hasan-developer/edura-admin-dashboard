@@ -133,9 +133,14 @@ table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after, table.d
     margin-bottom: 0;
 }
 
+.dataTable>thead>tr>th {
+    padding: 20px 10px;
+}
 
-
-
-
-
+.dt-container div.dt-layout-cell {
+    padding: 0 !important;
+}
+.dt-container.dt-empty-footer tbody > tr:last-child > * {
+    border-bottom: 0 !important;
+}
 /* ==================== Data Tables Css End ========================== */
