@@ -9752,7 +9752,7 @@ button:focus {
     padding: clamp(1.5rem, -1.086rem + 5.388vw, 3.625rem) clamp(1.25rem, -3.621rem + 6vw, 2.75rem) !important;
 }
 
-.grettings-box-two__content {
+.grettings-box-two {
     padding: 24px 0 24px clamp(1.25rem, -9.71rem + 13.5vw, 4.625rem) !important;
 }
 
